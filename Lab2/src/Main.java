@@ -7,12 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         int command;
-        MyString  container = null;
-        MyString cont2 = new MyString(1000);
-        cont2.add("abs");
-        cont2.add("abs");
-        cont2.add("abs");
-        cont2.add("abs");
+        MyString  container = null;        
         Scanner scan = new Scanner(System.in);
         while(true){
             System.out.println("---My menu---");
@@ -189,9 +184,7 @@ public class Main {
                     break;
                 case 6:
                     System.exit(0);
-                    break;
-                case 7:
-                    System.out.println(container.containsAll(cont2));
+                    break;         
 
             }
         }
