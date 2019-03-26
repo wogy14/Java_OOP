@@ -91,19 +91,12 @@ public class MyString implements Serializable,Iterable<String> {
         }
         return false;
     }
-    public boolean containsAll(MyString cont){
-        boolean checker;
-        for(int i = 0;i < length;i++){
-            checker = false;
-            for(int j = 0;j < cont.size();j++){
-                if(words[i].equals(cont.get(j))){
-                    checker = true;
-                    break;
-                }
-            }
-            if(!checker){
-                return false;
-            }
+    public boolean containsAll(String ... args){
+        if(args.length == 0){
+            throw new NullPointerException();
+        }
+        for(String one : args){
+            if(!contains(one)) return false;
         }
         return true;
     }
